@@ -95,7 +95,7 @@ function pifaceinit(){
 
 function pifaceread() {  
 var PIFD = require('node-pifacedigital');
-var pi = new PIFD.PIFaceDigital(0,true);  
+var pi = new PIFD.PIFaceDigital(parseInt(adapter.config.PiFaceAddress, 10) || 0, true);  
         PiFaceIN[0] = pi.get(0);
         PiFaceIN[1] = pi.get(1);
         PiFaceIN[2] = pi.get(2);

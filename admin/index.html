@@ -12,6 +12,10 @@
             "de": "PiFace Einstellungen",
             "ru": "PiFace Настройки"
         },
+        "PiFace address": {
+            "de": "PiFace Adresse",
+            "ru": "PiFace адрес"
+        }
     };
 
     function load(settings, onChange) {
@@ -22,6 +26,7 @@
                 onChange();
             });
         });
+
         for (var key in settings) {
             if ($('#' + key + '.value').attr('type') == 'checkbox') {
                 $('#' + key + '.value').prop('checked', settings[key]);
@@ -47,7 +52,17 @@
 </script>
 <div id="adapter-container">
     <table><tr><td><img src="piface.png" width=200></td><td><h3 class="translate">PiFace adapter settings</h3></td></tr></table>
-    <p>&nbsp;</p>
-   
+    <table>
+        <tr>
+            <td class="translate">PiFace address</td>
+            <td><select id="PiFaceAddress" class="value">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select></td>
+            <td class="translate"></td>
+        </tr>
+    </table>
 </div>
 </html>

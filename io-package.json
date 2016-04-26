@@ -19,7 +19,7 @@
         "extIcon":                  "https://raw.githubusercontent.com/eisbaeeer/iobroker.piface/master/admin/piface.png"
     },
     "native": {
-        "PiFaceAddress":  ""
+        "PiFaceAddress":  0
     },
     "objects": [ 
     ],
